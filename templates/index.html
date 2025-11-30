@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏥 Hệ Thống Dự Đoán Bệnh - AI Disease Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🏥 Hệ Thống Dự Đoán Bệnh</h1>
+                <p class="subtitle">Sử dụng AI để dự đoán bệnh dựa trên triệu chứng</p>
+            </div>
+            <div class="header-stats">
+                <div class="stat-badge">
+                    <span class="stat-number">{{ n_diseases }}</span>
+                    <span class="stat-label">Bệnh</span>
+                </div>
+                <div class="stat-badge">
+                    <span class="stat-number">{{ n_symptoms }}</span>
+                    <span class="stat-label">Triệu chứng</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Instructions -->
+            <div class="instructions">
+                <h3>📋 Hướng dẫn sử dụng</h3>
+                <ol>
+                    <li>Tìm kiếm hoặc chọn các triệu chứng bạn đang gặp phải</li>
+                    <li>Nhấn nút "Dự đoán bệnh" để nhận kết quả</li>
+                    <li>Xem danh sách các bệnh có khả năng và độ tin cậy</li>
+                </ol>
+                <div class="warning-box">
+                    <strong>⚠️ Lưu ý:</strong> Đây chỉ là công cụ hỗ trợ tham khảo.
+                    Vui lòng đến cơ sở y tế để được chẩn đoán chính xác!
+                </div>
+            </div>
+
+            <!-- Search Box -->
+            <div class="search-section">
+                <div class="search-box">
+                    <input type="text" id="searchInput"
+                        placeholder="🔍 Tìm kiếm triệu chứng (ví dụ: headache, fever, cough...)" autocomplete="off">
+                    <span class="search-icon">🔍</span>
+                </div>
+                <div class="search-stats">
+                    <span id="searchResults">Hiển thị {{ n_symptoms }} triệu chứng</span>
+                </div>
+            </div>
+
+            <!-- Selected Symptoms -->
+            <div class="selected-section">
+                <div class="section-header">
+                    <h3>✅ Triệu chứng đã chọn (<span id="selectedCount">0</span>)</h3>
+                    <button class="btn-clear" id="clearBtn" onclick="clearAll()">Xóa tất cả</button>
+                </div>
+                <div class="selected-symptoms" id="selectedSymptomsList">
+                    <div class="empty-state">
+                        <span class="empty-icon">🩺</span>
+                        <p>Chưa có triệu chứng nào được chọn</p>
+                        <small>Hãy chọn triệu chứng từ danh sách bên dưới</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Symptoms Grid -->
+            <div class="symptoms-section">
+                <h3>🩺 Danh sách triệu chứng</h3>
+                <div class="symptoms-grid" id="symptomsGrid">
+                    <!-- Symptoms will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Predict Button -->
+            <div class="action-section">
+                <button class="btn-predict" id="predictBtn" onclick="predictDisease()" disabled>
+                    <span class="btn-icon">🔍</span>
+                    <span class="btn-text">Dự đoán bệnh</span>
+                </button>
+            </div>
+
+            <!-- Loading -->
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Đang phân tích triệu chứng...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div class="alert alert-error" id="errorAlert">
+                <span class="alert-icon">❌</span>
+                <span class="alert-message" id="errorMessage"></span>
+            </div>
+
+            <!-- Results -->
+            <div class="results-section" id="resultsSection">
+                <div class="results-header">
+                    <h2>📊 Kết quả dự đoán</h2>
+                    <button class="btn-close" onclick="closeResults()">✕</button>
+                </div>
+
+                <div class="primary-result" id="primaryResult">
+                    <!-- Primary prediction will be here -->
+                </div>
+
+                <div class="results-info">
+                    <div class="info-item">
+                        <span class="info-label">Triệu chứng đã chọn:</span>
+                        <span class="info-value" id="symptomsMatched">0</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Thời gian dự đoán:</span>
+                        <span class="info-value" id="predictionTime">-</span>
+                    </div>
+                </div>
+
+                <div class="top-predictions">
+                    <h3>📈 Top 5 bệnh có khả năng cao</h3>
+                    <div class="predictions-list" id="predictionsList">
+                        <!-- Top predictions will be here -->
+                    </div>
+                </div>
+
+                <div class="disclaimer">
+                    <strong>⚠️ Khuyến cáo:</strong> Kết quả này chỉ mang tính chất tham khảo.
+                    Để được chẩn đoán chính xác, vui lòng đến gặp bác sĩ hoặc cơ sở y tế.
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2024 Disease Prediction System | Powered by AI & Machine Learning</p>
+            <p class="footer-links">
+                <a href="/api/health">API Health</a> |
+                <a href="https://github.com" target="_blank">GitHub</a> |
+                <a href="#" onclick="showAbout()">About</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>

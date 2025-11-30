@@ -1,0 +1,90 @@
+2025-11-30 08:50:33,952 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.3:5000
+2025-11-30 08:50:33,953 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-30 08:50:33,953 - werkzeug - INFO -  * Restarting with stat
+2025-11-30 08:50:36,151 - werkzeug - WARNING -  * Debugger is active!
+2025-11-30 08:50:36,154 - werkzeug - INFO -  * Debugger PIN: 230-738-080
+2025-11-30 08:50:48,540 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 08:50:48] "GET / HTTP/1.1" 200 -
+2025-11-30 08:50:48,604 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 08:50:48] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-11-30 08:50:48,784 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 08:50:48] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-11-30 08:50:49,093 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 08:50:49] "GET /api/symptoms HTTP/1.1" 200 -
+2025-11-30 08:50:49,171 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 08:50:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-11-30 08:50:59,330 - __main__ - INFO - Prediction request with 2 symptoms
+2025-11-30 08:50:59,366 - __main__ - INFO - Predicted: drug withdrawal (33.4%)
+2025-11-30 08:50:59,366 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 08:50:59] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 08:51:40,429 - __main__ - INFO - Prediction request with 9 symptoms
+2025-11-30 08:51:40,472 - __main__ - INFO - Predicted: panic disorder (41.1%)
+2025-11-30 08:51:40,472 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 08:51:40] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 08:52:07,152 - __main__ - INFO - Prediction request with 7 symptoms
+2025-11-30 08:52:07,197 - __main__ - INFO - Predicted: tinnitus of unknown cause (26.8%)
+2025-11-30 08:52:07,198 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 08:52:07] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 08:52:29,822 - __main__ - INFO - Prediction request with 12 symptoms
+2025-11-30 08:52:29,857 - __main__ - INFO - Predicted: fracture of the shoulder (62.7%)
+2025-11-30 08:52:29,857 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 08:52:29] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 09:04:28,823 - werkzeug - INFO -  * Detected change in 'D:\\DTU\\CS445U\\disease_prediction_system\\translations.py', reloading
+2025-11-30 09:04:29,039 - werkzeug - INFO -  * Restarting with stat
+2025-11-30 09:04:31,470 - werkzeug - WARNING -  * Debugger is active!
+2025-11-30 09:04:31,473 - werkzeug - INFO -  * Debugger PIN: 230-738-080
+2025-11-30 09:05:38,699 - werkzeug - INFO -  * Detected change in 'D:\\DTU\\CS445U\\disease_prediction_system\\app.py', reloading
+2025-11-30 09:05:38,916 - werkzeug - INFO -  * Restarting with stat
+2025-11-30 09:05:41,581 - werkzeug - WARNING -  * Debugger is active!
+2025-11-30 09:05:41,583 - werkzeug - INFO -  * Debugger PIN: 230-738-080
+2025-11-30 09:06:20,150 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:06:20] "GET / HTTP/1.1" 200 -
+2025-11-30 09:06:20,202 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:06:20] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-11-30 09:06:20,431 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:06:20] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-11-30 09:06:20,746 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:06:20] "GET /api/symptoms HTTP/1.1" 200 -
+2025-11-30 09:06:39,260 - __main__ - INFO - Prediction request with 2 symptoms
+2025-11-30 09:06:39,301 - __main__ - INFO - Predicted: trichinosis (7.9%)
+2025-11-30 09:06:39,301 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:06:39] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 09:06:48,031 - __main__ - INFO - Prediction request with 3 symptoms
+2025-11-30 09:06:48,065 - __main__ - INFO - Predicted: lactose intolerance (39.0%)
+2025-11-30 09:06:48,065 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:06:48] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 09:07:04,725 - __main__ - INFO - Prediction request with 4 symptoms
+2025-11-30 09:07:04,763 - __main__ - INFO - Predicted: kidney disease due to longstanding hypertension (56.1%)
+2025-11-30 09:07:04,763 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:07:04] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 09:07:19,059 - __main__ - INFO - Prediction request with 4 symptoms
+2025-11-30 09:07:19,092 - __main__ - INFO - Predicted: lactose intolerance (20.5%)
+2025-11-30 09:07:19,092 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:07:19] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 09:07:27,290 - __main__ - INFO - Prediction request with 5 symptoms
+2025-11-30 09:07:27,328 - __main__ - INFO - Predicted: nasal polyp (71.8%)
+2025-11-30 09:07:27,328 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:07:27] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 09:07:50,273 - __main__ - INFO - Prediction request with 6 symptoms
+2025-11-30 09:07:50,307 - __main__ - INFO - Predicted: nasal polyp (63.6%)
+2025-11-30 09:07:50,313 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:07:50] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 09:07:56,288 - __main__ - INFO - Prediction request with 7 symptoms
+2025-11-30 09:07:56,329 - __main__ - INFO - Predicted: interstitial lung disease (20.2%)
+2025-11-30 09:07:56,329 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:07:56] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 09:08:10,300 - __main__ - INFO - Prediction request with 5 symptoms
+2025-11-30 09:08:10,341 - __main__ - INFO - Predicted: acute sinusitis (49.6%)
+2025-11-30 09:08:10,341 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:08:10] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 09:08:20,417 - __main__ - INFO - Prediction request with 5 symptoms
+2025-11-30 09:08:20,453 - __main__ - INFO - Predicted: acute sinusitis (31.6%)
+2025-11-30 09:08:20,453 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:08:20] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 09:08:27,584 - __main__ - INFO - Prediction request with 5 symptoms
+2025-11-30 09:08:27,618 - __main__ - INFO - Predicted: acute sinusitis (44.8%)
+2025-11-30 09:08:27,625 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 09:08:27] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 09:09:33,344 - werkzeug - INFO -  * Detected change in 'D:\\DTU\\CS445U\\disease_prediction_system\\app.py', reloading
+2025-11-30 09:09:33,562 - werkzeug - INFO -  * Restarting with stat
+2025-11-30 14:09:41,891 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.219.122:5000
+2025-11-30 14:09:41,891 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-11-30 14:09:41,891 - werkzeug - INFO -  * Restarting with stat
+2025-11-30 14:09:44,283 - werkzeug - WARNING -  * Debugger is active!
+2025-11-30 14:09:44,285 - werkzeug - INFO -  * Debugger PIN: 230-738-080
+2025-11-30 14:09:52,470 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 14:09:52] "GET / HTTP/1.1" 200 -
+2025-11-30 14:09:52,518 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 14:09:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-11-30 14:09:52,731 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 14:09:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-11-30 14:09:53,045 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 14:09:53] "GET /api/symptoms HTTP/1.1" 200 -
+2025-11-30 14:11:02,599 - __main__ - INFO - Prediction request with 4 symptoms
+2025-11-30 14:11:02,638 - __main__ - INFO - Predicted: acute sinusitis (58.1%)
+2025-11-30 14:11:02,638 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 14:11:02] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 14:12:56,705 - __main__ - INFO - Prediction request with 4 symptoms
+2025-11-30 14:12:56,739 - __main__ - INFO - Predicted: encephalitis (34.8%)
+2025-11-30 14:12:56,739 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 14:12:56] "POST /api/predict HTTP/1.1" 200 -
+2025-11-30 14:13:10,409 - __main__ - INFO - Prediction request with 7 symptoms
+2025-11-30 14:13:10,450 - __main__ - INFO - Predicted: panic disorder (84.0%)
+2025-11-30 14:13:10,450 - werkzeug - INFO - 127.0.0.1 - - [30/Nov/2025 14:13:10] "POST /api/predict HTTP/1.1" 200 -

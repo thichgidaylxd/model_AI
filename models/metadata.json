@@ -1,0 +1,17 @@
+{
+  "model_type": "XGBoost",
+  "n_symptoms": 377,
+  "n_diseases": 754,
+  "training_history": [
+    {
+      "timestamp": "2025-11-30T08:50:09.577806",
+      "train_accuracy": 0.9511709478348014,
+      "test_accuracy": 0.8643987341772152,
+      "n_samples": 94796,
+      "test_size": 0.2,
+      "training_time": 810.5090961456299
+    }
+  ],
+  "last_trained": "2025-11-30T08:50:16.826027",
+  "has_label_encoder": true
+}
