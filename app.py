@@ -239,7 +239,7 @@ if __name__ == '__main__':
     print(f"📊 Model status: {'✅ Loaded' if predictor.model else '❌ Not loaded'}")
     print(f"💊 Số bệnh: {len(predictor.diseases_list)}")
     print(f"🩺 Số triệu chứng: {len(predictor.symptoms_list)}")
-    print(f"\n🌐 Server đang chạy tại: http://localhost:5000")
+    print(f"\n🌐 Server đang chạy tại: http://localhost:5002")
     print(f"📖 API Documentation:")
     print(f"   - GET  /api/health       - Health check")
     print(f"   - GET  /api/symptoms     - Lấy danh sách triệu chứng")
@@ -253,6 +253,6 @@ if __name__ == '__main__':
     app.run(
         debug=True,
         host='0.0.0.0',
-        port=5000,
+        port=5002,
         use_reloader=True
     )

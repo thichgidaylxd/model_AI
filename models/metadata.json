@@ -4,14 +4,14 @@
   "n_diseases": 754,
   "training_history": [
     {
-      "timestamp": "2025-11-30T08:50:09.577806",
-      "train_accuracy": 0.9511709478348014,
-      "test_accuracy": 0.8643987341772152,
+      "timestamp": "2025-12-14T01:15:23.784060",
+      "train_accuracy": 0.9529511050160874,
+      "test_accuracy": 0.8604957805907173,
       "n_samples": 94796,
       "test_size": 0.2,
-      "training_time": 810.5090961456299
+      "training_time": 834.5020961761475
     }
   ],
-  "last_trained": "2025-11-30T08:50:16.826027",
+  "last_trained": "2025-12-14T02:15:50.409695",
   "has_label_encoder": true
 }

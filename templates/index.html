@@ -4,76 +4,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🏥 Hệ Thống Dự Đoán Bệnh - AI Disease Predictor</title>
+    <title>AI Disease Predictor - Hệ Thống Dự Đoán Bệnh Thông Minh</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
+    <!-- Background Elements -->
+    <div class="bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
     <div class="container">
-        <!-- Header -->
+        <!-- Modern Header -->
         <header class="header">
-            <div class="header-content">
-                <h1>🏥 Hệ Thống Dự Đoán Bệnh</h1>
-                <p class="subtitle">Sử dụng AI để dự đoán bệnh dựa trên triệu chứng</p>
-            </div>
-            <div class="header-stats">
-                <div class="stat-badge">
-                    <span class="stat-number">{{ n_diseases }}</span>
-                    <span class="stat-label">Bệnh</span>
+            <div class="header-top">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <path d="M20 5L25 15H35L27.5 22.5L30 32.5L20 25L10 32.5L12.5 22.5L5 15H15L20 5Z"
+                                fill="white" opacity="0.9" />
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1>AI Disease Predictor</h1>
+                        <span class="logo-tagline">Powered by Machine Learning</span>
+                    </div>
                 </div>
-                <div class="stat-badge">
-                    <span class="stat-number">{{ n_symptoms }}</span>
-                    <span class="stat-label">Triệu chứng</span>
+                <div class="header-actions">
+                    <button class="btn-icon" title="Thông tin">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                            <path
+                                d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm1 15H9V9h2v6zm0-8H9V5h2v2z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="header-content">
+                <h2 class="header-title">Hệ Thống Dự Đoán Bệnh Thông Minh</h2>
+                <p class="header-description">Phân tích triệu chứng và đưa ra dự đoán bệnh chính xác bằng công nghệ AI
+                    tiên tiến</p>
+            </div>
+
+            <div class="stats-container">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M9 11l3 3L22 4" />
+                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-value">{{ n_diseases }}</span>
+                        <span class="stat-label">Loại bệnh</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-value">{{ n_symptoms }}</span>
+                        <span class="stat-label">Triệu chứng</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <span class="stat-value">98%</span>
+                        <span class="stat-label">Độ chính xác</span>
+                    </div>
                 </div>
             </div>
         </header>
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Instructions -->
-            <div class="instructions">
-                <h3>📋 Hướng dẫn sử dụng</h3>
-                <ol>
-                    <li>Tìm kiếm hoặc chọn các triệu chứng bạn đang gặp phải</li>
-                    <li>Nhấn nút "Dự đoán bệnh" để nhận kết quả</li>
-                    <li>Xem danh sách các bệnh có khả năng và độ tin cậy</li>
-                </ol>
-                <div class="warning-box">
-                    <strong>⚠️ Lưu ý:</strong> Đây chỉ là công cụ hỗ trợ tham khảo.
-                    Vui lòng đến cơ sở y tế để được chẩn đoán chính xác!
+            <!-- Info Banner -->
+            <div class="info-banner">
+                <div class="info-banner-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path
+                            d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0zm1 15H9V9h2v6zm0-8H9V5h2v2z" />
+                    </svg>
+                </div>
+                <div class="info-banner-content">
+                    <strong>Lưu ý quan trọng:</strong> Đây là công cụ hỗ trợ tham khảo, không thay thế cho chẩn đoán y
+                    khoa chuyên nghiệp.
+                    Vui lòng tham khảo ý kiến bác sĩ để có kết quả chính xác nhất.
                 </div>
             </div>
 
-            <!-- Search Box -->
+            <!-- Search Section -->
             <div class="search-section">
-                <div class="search-box">
-                    <input type="text" id="searchInput"
-                        placeholder="🔍 Tìm kiếm triệu chứng (ví dụ: headache, fever, cough...)" autocomplete="off">
-                    <span class="search-icon">🔍</span>
-                </div>
-                <div class="search-stats">
-                    <span id="searchResults">Hiển thị {{ n_symptoms }} triệu chứng</span>
+                <label class="section-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                    Tìm kiếm triệu chứng
+                </label>
+                <div class="search-wrapper">
+                    <div class="search-input-group">
+                        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8" />
+                            <path d="M21 21l-4.35-4.35" />
+                        </svg>
+                        <input type="text" id="searchInput" class="search-input"
+                            placeholder="Nhập triệu chứng (ví dụ: sốt, đau đầu, ho...)" autocomplete="off">
+                        <div class="search-count" id="searchResults">
+                            <span class="count-number">{{ n_symptoms }}</span> triệu chứng
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Selected Symptoms -->
             <div class="selected-section">
                 <div class="section-header">
-                    <h3>✅ Triệu chứng đã chọn (<span id="selectedCount">0</span>)</h3>
-                    <button class="btn-clear" id="clearBtn" onclick="clearAll()">Xóa tất cả</button>
+                    <label class="section-label">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        Triệu chứng đã chọn
+                        <span class="badge" id="selectedCount">0</span>
+                    </label>
+                    <button class="btn-text" id="clearBtn" onclick="clearAll()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" />
+                        </svg>
+                        Xóa tất cả
+                    </button>
                 </div>
-                <div class="selected-symptoms" id="selectedSymptomsList">
+                <div class="selected-container" id="selectedSymptomsList">
                     <div class="empty-state">
-                        <span class="empty-icon">🩺</span>
-                        <p>Chưa có triệu chứng nào được chọn</p>
-                        <small>Hãy chọn triệu chứng từ danh sách bên dưới</small>
+                        <div class="empty-icon">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M9 11l3 3L22 4" />
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+                            </svg>
+                        </div>
+                        <p class="empty-title">Chưa có triệu chứng nào được chọn</p>
+                        <p class="empty-description">Chọn các triệu chứng từ danh sách bên dưới để bắt đầu</p>
                     </div>
                 </div>
             </div>
 
             <!-- Symptoms Grid -->
             <div class="symptoms-section">
-                <h3>🩺 Danh sách triệu chứng</h3>
+                <label class="section-label">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7" />
+                        <rect x="14" y="3" width="7" height="7" />
+                        <rect x="14" y="14" width="7" height="7" />
+                        <rect x="3" y="14" width="7" height="7" />
+                    </svg>
+                    Tất cả triệu chứng
+                </label>
                 <div class="symptoms-grid" id="symptomsGrid">
                     <!-- Symptoms will be loaded here -->
                 </div>
@@ -81,68 +187,141 @@
 
             <!-- Predict Button -->
             <div class="action-section">
-                <button class="btn-predict" id="predictBtn" onclick="predictDisease()" disabled>
-                    <span class="btn-icon">🔍</span>
-                    <span class="btn-text">Dự đoán bệnh</span>
+                <button class="btn-primary" id="predictBtn" onclick="predictDisease()" disabled>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                    <span>Phân tích và dự đoán</span>
+                    <div class="btn-shine"></div>
                 </button>
             </div>
 
             <!-- Loading -->
-            <div class="loading" id="loading">
-                <div class="spinner"></div>
-                <p>Đang phân tích triệu chứng...</p>
+            <div class="loading-overlay" id="loading">
+                <div class="loading-content">
+                    <div class="spinner-modern">
+                        <div class="spinner-ring"></div>
+                        <div class="spinner-ring"></div>
+                        <div class="spinner-ring"></div>
+                    </div>
+                    <p class="loading-text">Đang phân tích triệu chứng của bạn...</p>
+                    <p class="loading-subtext">Vui lòng đợi trong giây lát</p>
+                </div>
             </div>
 
-            <!-- Error Message -->
+            <!-- Error Alert -->
             <div class="alert alert-error" id="errorAlert">
-                <span class="alert-icon">❌</span>
+                <svg class="alert-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
                 <span class="alert-message" id="errorMessage"></span>
             </div>
 
             <!-- Results -->
             <div class="results-section" id="resultsSection">
                 <div class="results-header">
-                    <h2>📊 Kết quả dự đoán</h2>
-                    <button class="btn-close" onclick="closeResults()">✕</button>
+                    <div>
+                        <h2 class="results-title">Kết quả phân tích</h2>
+                        <p class="results-subtitle">Dựa trên các triệu chứng bạn đã cung cấp</p>
+                    </div>
+                    <button class="btn-close" onclick="closeResults()">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="18" y1="6" x2="6" y2="18" />
+                            <line x1="6" y1="6" x2="18" y2="18" />
+                        </svg>
+                    </button>
                 </div>
 
                 <div class="primary-result" id="primaryResult">
                     <!-- Primary prediction will be here -->
                 </div>
 
-                <div class="results-info">
-                    <div class="info-item">
-                        <span class="info-label">Triệu chứng đã chọn:</span>
-                        <span class="info-value" id="symptomsMatched">0</span>
+                <div class="results-meta">
+                    <div class="meta-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <div class="meta-content">
+                            <span class="meta-label">Triệu chứng</span>
+                            <span class="meta-value" id="symptomsMatched">0</span>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <span class="info-label">Thời gian dự đoán:</span>
-                        <span class="info-value" id="predictionTime">-</span>
+                    <div class="meta-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <div class="meta-content">
+                            <span class="meta-label">Thời gian</span>
+                            <span class="meta-value" id="predictionTime">-</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="top-predictions">
-                    <h3>📈 Top 5 bệnh có khả năng cao</h3>
+                <div class="predictions-container">
+                    <h3 class="predictions-title">Các khả năng khác</h3>
                     <div class="predictions-list" id="predictionsList">
                         <!-- Top predictions will be here -->
                     </div>
                 </div>
 
-                <div class="disclaimer">
-                    <strong>⚠️ Khuyến cáo:</strong> Kết quả này chỉ mang tính chất tham khảo.
-                    Để được chẩn đoán chính xác, vui lòng đến gặp bác sĩ hoặc cơ sở y tế.
+                <div class="disclaimer-card">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
+                        <line x1="12" y1="9" x2="12" y2="13" />
+                        <line x1="12" y1="17" x2="12.01" y2="17" />
+                    </svg>
+                    <div>
+                        <strong>Lưu ý quan trọng</strong>
+                        <p>Kết quả này chỉ mang tính chất tham khảo. Để được chẩn đoán và điều trị chính xác,
+                            vui lòng đến gặp bác sĩ hoặc cơ sở y tế có chuyên môn.</p>
+                    </div>
                 </div>
             </div>
         </main>
 
         <!-- Footer -->
         <footer class="footer">
-            <p>© 2024 Disease Prediction System | Powered by AI & Machine Learning</p>
-            <p class="footer-links">
-                <a href="/api/health">API Health</a> |
-                <a href="https://github.com" target="_blank">GitHub</a> |
-                <a href="#" onclick="showAbout()">About</a>
-            </p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>AI Disease Predictor</h3>
+                    <p>Hệ thống dự đoán bệnh thông minh sử dụng công nghệ Machine Learning và AI tiên tiến</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/api/health" class="footer-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 6v6l4 2" />
+                        </svg>
+                        API Status
+                    </a>
+                    <a href="https://github.com" target="_blank" class="footer-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="#" onclick="showAbout()" class="footer-link">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 16v-4M12 8h.01" />
+                        </svg>
+                        Về chúng tôi
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AI Disease Predictor. All rights reserved.</p>
+            </div>
         </footer>
     </div>
 
