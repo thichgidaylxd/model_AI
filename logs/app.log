@@ -269,3 +269,40 @@
 2025-12-25 16:45:30,367 - __main__ - INFO - Prediction request with 4 symptoms
 2025-12-25 16:45:30,407 - __main__ - INFO - Predicted: panic disorder (42.0%)
 2025-12-25 16:45:30,408 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:45:30] "POST /api/predict HTTP/1.1" 200 -
+2025-12-26 00:38:26,576 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.1.4:5002
+2025-12-26 00:38:26,576 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-26 00:38:35,293 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:38:35] "GET / HTTP/1.1" 200 -
+2025-12-26 00:38:35,343 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:38:35] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-12-26 00:38:35,389 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:38:35] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-12-26 00:38:35,625 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:38:35] "GET /api/symptoms HTTP/1.1" 200 -
+2025-12-26 00:38:35,851 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:38:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-26 00:38:37,982 - __main__ - INFO - Prediction request with 1 symptoms
+2025-12-26 00:38:38,021 - __main__ - INFO - Predicted: alcoholic liver disease (3.8%)
+2025-12-26 00:38:38,022 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:38:38] "POST /api/predict HTTP/1.1" 200 -
+2025-12-26 00:41:04,227 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.1.4:5002
+2025-12-26 00:41:04,227 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-26 00:41:09,904 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:09] "GET / HTTP/1.1" 200 -
+2025-12-26 00:41:09,973 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:09] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-12-26 00:41:09,974 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-26 00:41:10,029 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:10] "GET /api/symptoms HTTP/1.1" 200 -
+2025-12-26 00:41:11,317 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:11] "GET / HTTP/1.1" 200 -
+2025-12-26 00:41:11,332 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-26 00:41:11,332 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:11] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-12-26 00:41:11,344 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:11] "GET /api/symptoms HTTP/1.1" 200 -
+2025-12-26 00:41:12,481 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:12] "GET / HTTP/1.1" 200 -
+2025-12-26 00:41:12,491 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-26 00:41:12,493 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-12-26 00:41:12,500 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:12] "GET /api/symptoms HTTP/1.1" 200 -
+2025-12-26 00:41:12,801 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:12] "GET / HTTP/1.1" 200 -
+2025-12-26 00:41:12,811 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-12-26 00:41:12,813 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:12] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-12-26 00:41:12,819 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:12] "GET /api/symptoms HTTP/1.1" 200 -
+2025-12-26 00:41:15,628 - __main__ - INFO - Prediction request with 2 symptoms
+2025-12-26 00:41:15,668 - __main__ - INFO - Predicted: retinopathy due to high blood pressure (42.9%)
+2025-12-26 00:41:15,669 - werkzeug - INFO - 127.0.0.1 - - [26/Dec/2025 00:41:15] "POST /api/predict HTTP/1.1" 200 -

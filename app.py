@@ -8,9 +8,10 @@ from flask_cors import CORS
 from disease_predictor import DiseasePredictionModel
 from translations import get_symptom_vi, get_disease_vi, SYMPTOMS_VI, DISEASES_VI
 import os
+import sys
 import logging
 from datetime import datetime
-
+os.makedirs('logs', exist_ok=True)
 # Cấu hình logging
 logging.basicConfig(
     level=logging.INFO,
@@ -30,6 +31,12 @@ CORS(app)
 predictor = DiseasePredictionModel()
 
 # Load model khi khởi động
+import subprocess
+
+if not os.path.exists("models/disease_model.pkl"):
+    print("📥 Model not found → downloading...")
+    subprocess.run([sys.executable, "download_model.py"], check=True)
+
 try:
     predictor.load_model('models')
     logger.info("✅ Model loaded successfully!")
@@ -229,7 +236,7 @@ def internal_error(error):
 
 if __name__ == '__main__':
     # Tạo thư mục logs nếu chưa có
-    os.makedirs('logs', exist_ok=True)
+
     
     # Hiển thị thông tin
     print("=" * 70)
@@ -250,9 +257,5 @@ if __name__ == '__main__':
     print("\n⏳ Starting server...\n")
     
     # Chạy server
-    app.run(
-        debug=True,
-        host='0.0.0.0',
-        port=5002,
-        use_reloader=True
-    )
+    port = int(os.environ.get("PORT", 5002))
+    app.run(host="0.0.0.0", port=port, debug=False)
