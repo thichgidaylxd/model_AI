@@ -179,8 +179,8 @@ body {
 /* Container */
 .container {
     position: relative;
-    max-width: 1400px;
-    margin: 2rem auto;
+    max-width: 1200px;
+    margin: 1.25rem auto;
     background: var(--bg-primary);
     border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-2xl);
@@ -195,7 +195,7 @@ body {
 .header {
     background: var(--accent-gradient);
     color: white;
-    padding: 3rem 3rem 2rem;
+    padding: 2rem 2rem 1.5rem;
     position: relative;
     overflow: hidden;
 }
@@ -349,7 +349,7 @@ body {
    ======================================== */
 
 .main-content {
-    padding: 3rem;
+    padding: 2rem;
 }
 
 /* Section Label */

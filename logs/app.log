@@ -225,3 +225,47 @@
 2025-12-14 13:48:14,658 - __main__ - INFO - Prediction request with 1 symptoms
 2025-12-14 13:48:14,754 - __main__ - INFO - Predicted: diabetes insipidus (3.0%)
 2025-12-14 13:48:14,754 - werkzeug - INFO - 127.0.0.1 - - [14/Dec/2025 13:48:14] "POST /api/predict HTTP/1.1" 200 -
+2025-12-25 16:40:50,004 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5002
+ * Running on http://192.168.1.4:5002
+2025-12-25 16:40:50,004 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-12-25 16:40:50,004 - werkzeug - INFO -  * Restarting with stat
+2025-12-25 16:40:52,307 - werkzeug - WARNING -  * Debugger is active!
+2025-12-25 16:40:52,310 - werkzeug - INFO -  * Debugger PIN: 124-215-323
+2025-12-25 16:40:54,659 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:40:54] "GET / HTTP/1.1" 200 -
+2025-12-25 16:40:54,705 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:40:54] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-12-25 16:40:54,905 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:40:54] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-12-25 16:40:55,218 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:40:55] "GET /api/symptoms HTTP/1.1" 200 -
+2025-12-25 16:40:55,395 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:40:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-12-25 16:41:00,310 - __main__ - INFO - Prediction request with 4 symptoms
+2025-12-25 16:41:00,366 - __main__ - INFO - Predicted: orthostatic hypotension (38.5%)
+2025-12-25 16:41:00,366 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:41:00] "POST /api/predict HTTP/1.1" 200 -
+2025-12-25 16:41:34,456 - werkzeug - INFO -  * Detected change in 'D:\\DTU\\CS445U\\disease_prediction_system\\translations.py', reloading
+2025-12-25 16:41:34,722 - werkzeug - INFO -  * Restarting with stat
+2025-12-25 16:41:37,380 - werkzeug - WARNING -  * Debugger is active!
+2025-12-25 16:41:37,384 - werkzeug - INFO -  * Debugger PIN: 124-215-323
+2025-12-25 16:42:25,550 - werkzeug - INFO -  * Detected change in 'D:\\DTU\\CS445U\\disease_prediction_system\\translations.py', reloading
+2025-12-25 16:42:25,810 - werkzeug - INFO -  * Restarting with stat
+2025-12-25 16:42:28,228 - werkzeug - WARNING -  * Debugger is active!
+2025-12-25 16:42:28,230 - werkzeug - INFO -  * Debugger PIN: 124-215-323
+2025-12-25 16:42:53,625 - __main__ - INFO - Prediction request with 4 symptoms
+2025-12-25 16:42:53,669 - __main__ - INFO - Predicted: orthostatic hypotension (38.5%)
+2025-12-25 16:42:53,669 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:42:53] "POST /api/predict HTTP/1.1" 200 -
+2025-12-25 16:44:01,593 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:44:01] "GET / HTTP/1.1" 200 -
+2025-12-25 16:44:01,638 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:44:01] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-12-25 16:44:01,834 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:44:01] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-12-25 16:44:02,152 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:44:02] "GET /api/symptoms HTTP/1.1" 200 -
+2025-12-25 16:44:47,941 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:44:47] "GET / HTTP/1.1" 200 -
+2025-12-25 16:44:48,248 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:44:48] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-12-25 16:44:48,256 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:44:48] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-12-25 16:44:48,570 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:44:48] "GET /api/symptoms HTTP/1.1" 200 -
+2025-12-25 16:45:03,255 - __main__ - INFO - Prediction request with 2 symptoms
+2025-12-25 16:45:03,293 - __main__ - INFO - Predicted: drug withdrawal (16.8%)
+2025-12-25 16:45:03,294 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:45:03] "POST /api/predict HTTP/1.1" 200 -
+2025-12-25 16:45:24,737 - __main__ - INFO - Prediction request with 3 symptoms
+2025-12-25 16:45:24,777 - __main__ - INFO - Predicted: anxiety (28.0%)
+2025-12-25 16:45:24,777 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:45:24] "POST /api/predict HTTP/1.1" 200 -
+2025-12-25 16:45:30,367 - __main__ - INFO - Prediction request with 4 symptoms
+2025-12-25 16:45:30,407 - __main__ - INFO - Predicted: panic disorder (42.0%)
+2025-12-25 16:45:30,408 - werkzeug - INFO - 127.0.0.1 - - [25/Dec/2025 16:45:30] "POST /api/predict HTTP/1.1" 200 -
